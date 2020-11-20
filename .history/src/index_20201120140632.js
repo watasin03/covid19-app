@@ -4,12 +4,18 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import styled from 'styled-components'
 import { GlobalStyle } from './styles/GLobalStyle';
-import Charts from './components/Charts';
+
+const Bar = styled.div`
+  position: absolute;
+  width: ${this.props.total};
+  height: 20px;
+  background-color: red;
+`
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-      <Charts />
+      <Bar />
   </React.StrictMode>,
   document.getElementById('root')
 );

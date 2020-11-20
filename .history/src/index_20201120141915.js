@@ -9,7 +9,7 @@ import Charts from './components/Charts';
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-      <Charts />
+      <Charts total={data.length} />
   </React.StrictMode>,
   document.getElementById('root')
 );

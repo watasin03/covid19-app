@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import styled from 'styled-components'
-import { GlobalStyle } from './styles/GLobalStyle';
-import Charts from './components/Charts';
+
+const Bar = styled.div`
+  
+`
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
-      <Charts />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
