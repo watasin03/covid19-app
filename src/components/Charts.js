@@ -1,3 +1,4 @@
+import { render } from '@testing-library/react'
 import React,{useEffect, useState} from 'react'
 import { Helmet } from "react-helmet"
 import styled from 'styled-components'
@@ -30,6 +31,16 @@ const Text = styled.p`
     padding: 0;
     margin : 0;
 `
+
+const Loading = ()=> {
+    return (
+        <div className={'loading-square'}>
+            <div className={'loading-text'}>
+                <h1>loading...</h1>
+            </div>
+        </div>
+    )
+}
 
 const randomColor = () => {
     return '#' + ('00000' + (Math.random() * 16777216 << 0).toString(16)).substr(-6);
@@ -106,6 +117,7 @@ export default function Charts(props) {
             <title>Covid-19 Report</title>
         </Helmet>
             <div className={'chart-section'}>
+                { data.length < 1 ? Loading() : null }
                 <div className={'top-section'}>
                     <h1>COVID-19 Global Cases</h1>
                     <h3>Date : {getdate[count]}</h3>
