@@ -2,5 +2,29 @@
     margin: 5rem auto;
     position: relative;
     width: 70%;
+}
+
+.top-section {
+    position: relative;
+    margin: 1rem auto;
+    text-align: center;
+    width: 100%;
+}
+.data-wrap {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.data-section {
+    position: relative;
+    display: block;
+    width: 100%;
     height: 600px;
+}
+
+.bottom-secton {
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+    align-items: center;
 }
